@@ -14,9 +14,7 @@ import {
   ChevronRight,
   Send,
   CheckCircle2,
-  Sparkles,
-  Activity,
-  Bot
+  Sparkles
 } from 'lucide-react';
 import Section from './components/Section';
 import AIChat from './components/AIChat';
@@ -199,11 +197,11 @@ const App: React.FC = () => {
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-600/5 rounded-full blur-3xl group-hover:bg-blue-600/10 transition-colors"></div>
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-12 rounded-2xl bg-blue-600/10 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                  {idx === 0 && <Sparkles size={24} />}
+                  {idx === 0 && <Terminal size={24} />}
                   {idx === 1 && <Cpu size={24} />}
                   {idx === 2 && <Zap size={24} />}
-                  {idx === 3 && <Bot size={24} />}
-                  {idx === 4 && <Activity size={24} />}
+                  {idx === 3 && <Sparkles size={24} />}
+                  {idx === 4 && <Database size={24} />}
                 </div>
                 <h3 className="text-2xl font-black text-white">
                   {skill.category}

@@ -70,26 +70,11 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SKILLS: SkillCategory[] = [
-  { 
-    category: "Generative AI & LLM Engineering", 
-    items: ["Fine-Tuning (LoRA, QLoRA, Unsloth)", "RAG Architecture (Hybrid Search)", "Vector DBs (Pinecone, ChromaDB)", "Structured Output (JSON Schema)", "Prompt Engineering", "Token Efficiency", "LLM Evaluation (ROUGE, BLEU)", "Quantization (4-bit/8-bit)"] 
-  },
-  { 
-    category: "AI System Architecture", 
-    items: ["End-to-End AI Pipelines", "Async Microservices (FastAPI)", "High-Concurrency Design", "Workflow Orchestration (n8n)", "Failure Recovery (Circuit Breakers)", "Semantic Caching (Redis)", "Database Performance"] 
-  },
-  { 
-    category: "Performance Engineering", 
-    items: ["Latency Reduction (80-90%)", "Throughput Optimization (10x)", "Parallel Execution", "Connection Pooling", "Memory & GPU Profiling", "Batch Inference", "Async Task Queues"] 
-  },
-  { 
-    category: "Intelligent Automation & RPA", 
-    items: ["Playwright Anti-Detection", "Network Interception (AJAX)", "Session Lifecycle Management", "Insurance Portal Automation", "Real-Time Eligibility Verification"] 
-  },
-  { 
-    category: "Healthcare AI Domain", 
-    items: ["Medical Code Structuring (CPT/ICD)", "Insurance Eligibility Systems", "Billing Workflow Optimization", "HIPAA-Compliant Pipelines", "Medical Entity Extraction (95%+)"] 
-  }
+  { category: "Languages", items: ["Python", "SQL", "JavaScript", "C++"] },
+  { category: "Backend & APIs", items: ["FastAPI", "Flask", "REST APIs", "Asynchronous Processing", "Authentication"] },
+  { category: "Automation", items: ["Playwright", "HTTPX", "AJAX Scraping", "RPA", "n8n"] },
+  { category: "AI / GenAI", items: ["LLMs", "RAG", "LangChain", "OCR", "Fine-Tuning", "Vector DBs"] },
+  { category: "Databases", items: ["MySQL", "MongoDB", "Chroma", "Pinecone"] }
 ];
 
 export const FULL_RESUME_TEXT = `
