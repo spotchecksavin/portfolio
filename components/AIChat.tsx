@@ -46,79 +46,78 @@ const AIChat: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
+    <div className="fixed bottom-16 sm:bottom-6 right-3 sm:right-6 z-50 flex flex-col items-end gap-2 sm:gap-4">
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="w-80 md:w-[400px] h-[550px] glass rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-white/10"
+            className="w-[calc(100vw-1.5rem)] sm:w-80 md:w-[400px] h-[500px] sm:h-[550px] glass bg-surface rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden"
           >
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-5 flex justify-between items-center shadow-lg">
-              <div className="flex items-center gap-3">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-3 sm:p-5 flex justify-between items-center shadow-lg">
+              <div className="flex items-center gap-2 sm:gap-3">
                 <div className="relative">
-                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md">
-                     <Sparkles className="w-6 h-6 text-white" />
+                  <div className="w-8 sm:w-10 h-8 sm:h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md">
+                    <Sparkles className="w-4 sm:w-6 h-4 sm:h-6 text-white" />
                   </div>
-                  <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-400 border-2 border-indigo-600 rounded-full"></div>
+                  <div className="absolute -bottom-1 -right-1 w-2.5 sm:w-3 h-2.5 sm:h-3 bg-green-400 border-2 border-indigo-600 rounded-full"></div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-white text-sm">Savin AI Agent</h3>
-                  <p className="text-[10px] text-blue-100 uppercase tracking-widest font-bold">Online & Ready</p>
+                <div className="min-w-0">
+                  <h3 className="font-bold text-white text-xs sm:text-sm">Savin AI Agent</h3>
+                  <p className="text-[8px] sm:text-[10px] text-blue-100 uppercase tracking-widest font-bold">Online & Ready</p>
                 </div>
               </div>
-              <div className="flex items-center gap-2">
-                <button 
-                  onClick={() => setIsOpen(false)} 
-                  className="p-1.5 hover:bg-white/10 rounded-lg transition-colors text-white/60 hover:text-white"
+              <div className="flex items-center gap-1">
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="p-1 sm:p-1.5 hover:bg-white/10 rounded-lg transition-colors text-white/60 hover:text-white"
                   title="Minimize"
                 >
-                  <Minus className="w-5 h-5" />
+                  <Minus className="w-4 sm:w-5 h-4 sm:h-5" />
                 </button>
-                <button 
-                  onClick={() => setIsVisible(false)} 
-                  className="p-1.5 hover:bg-white/10 rounded-lg transition-colors text-white/60 hover:text-white"
+                <button
+                  onClick={() => setIsVisible(false)}
+                  className="p-1 sm:p-1.5 hover:bg-white/10 rounded-lg transition-colors text-white/60 hover:text-white"
                   title="Close Assistant"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-4 sm:w-5 h-4 sm:h-5" />
                 </button>
               </div>
             </div>
 
-            <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth">
+            <div ref={scrollRef} className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 scroll-smooth bg-surface-secondary">
               {messages.map((msg, idx) => (
                 <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  <div className={`max-w-[85%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
-                    msg.role === 'user' 
-                      ? 'bg-blue-600 text-white rounded-tr-none shadow-md shadow-blue-500/20' 
-                      : 'bg-white/5 text-gray-200 rounded-tl-none border border-white/10'
-                  }`}>
+                  <div className={`max-w-[85%] px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm leading-relaxed ${msg.role === 'user'
+                    ? 'bg-blue-600 text-white rounded-tr-none shadow-md shadow-blue-500/20'
+                    : 'bg-surface text-content rounded-tl-none border border-black/5 dark:border-white/10 shadow-sm'
+                    }`}>
                     {msg.text}
                   </div>
                 </div>
               ))}
               {loading && (
                 <div className="flex justify-start">
-                  <div className="bg-white/5 border border-white/10 px-4 py-3 rounded-2xl text-sm text-gray-400 flex items-center gap-2">
+                  <div className="bg-surface border border-black/5 dark:border-white/10 shadow-sm px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm text-content-faint flex items-center gap-2">
                     <div className="flex gap-1">
-                      <div className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce"></div>
-                      <div className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce [animation-delay:0.2s]"></div>
-                      <div className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce [animation-delay:0.4s]"></div>
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></div>
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce [animation-delay:0.2s]"></div>
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce [animation-delay:0.4s]"></div>
                     </div>
-                    Analyzing context...
+                    Analyzing...
                   </div>
                 </div>
               )}
             </div>
 
             {messages.length < 5 && !loading && (
-              <div className="px-4 pb-2 flex flex-wrap gap-2">
+              <div className="px-3 sm:px-4 pb-2 pt-2 bg-surface-secondary flex flex-col xss:flex-wrap gap-2">
                 {SUGGESTIONS.map((s, i) => (
-                  <button 
-                    key={i} 
+                  <button
+                    key={i}
                     onClick={() => handleSend(s)}
-                    className="text-[10px] bg-white/5 border border-white/10 hover:bg-white/10 text-gray-400 px-3 py-1.5 rounded-full transition-colors whitespace-nowrap"
+                    className="w-full text-[9px] sm:text-[10px] bg-surface border border-black/5 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/10 hover:text-content text-content-faint px-2 sm:px-3 py-1 sm:py-1.5 rounded-full transition-colors whitespace-nowrap sm:whitespace-normal sm:flex-1 shadow-sm"
                   >
                     {s}
                   </button>
@@ -126,20 +125,20 @@ const AIChat: React.FC = () => {
               </div>
             )}
 
-            <div className="p-4 border-t border-white/5 bg-black/20 flex gap-2">
-              <input 
+            <div className="p-3 sm:p-4 border-t border-black/5 dark:border-white/5 bg-surface flex gap-2">
+              <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-                placeholder="Ask me about Savin's impact..."
-                className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-blue-500/50 text-white placeholder-gray-500 transition-all"
+                placeholder="Ask about Savin..."
+                className="flex-1 bg-surface-secondary border border-black/5 dark:border-white/10 rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm focus:outline-none focus:border-blue-500/50 text-content placeholder:text-content-faint transition-all"
               />
-              <button 
+              <button
                 onClick={() => handleSend()}
                 disabled={loading}
-                className="bg-blue-600 p-2.5 rounded-xl hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20 disabled:opacity-50"
+                className="bg-blue-600 p-2 sm:p-2.5 rounded-xl hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20 disabled:opacity-50"
               >
-                <Send className="w-5 h-5 text-white" />
+                <Send className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
               </button>
             </div>
           </motion.div>
@@ -147,16 +146,16 @@ const AIChat: React.FC = () => {
       </AnimatePresence>
 
       {!isOpen && (
-        <motion.button 
+        <motion.button
           initial={{ scale: 0, rotate: -45 }}
           animate={{ scale: 1, rotate: 0 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsOpen(true)}
-          className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/40 group overflow-hidden relative"
+          className="w-12 sm:w-16 h-12 sm:h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/40 group overflow-hidden relative flex-shrink-0"
         >
           <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <MessageSquare className="w-8 h-8 text-white relative z-10" />
+          <MessageSquare className="w-6 sm:w-8 h-6 sm:h-8 text-white relative z-10" />
         </motion.button>
       )}
     </div>

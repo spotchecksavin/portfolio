@@ -2,7 +2,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { FULL_RESUME_TEXT } from "../constants";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || '' });
 
 export const askAiAboutSavin = async (question: string) => {
   try {
