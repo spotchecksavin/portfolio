@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring, useReducedMotion } from 'framer-motion';
 import {
   Terminal,
@@ -20,15 +20,10 @@ import Section from './components/Section';
 import AIChat from './components/AIChat';
 import { PERSONAL_INFO, SKILLS, EXPERIENCES, PROJECTS } from './constants';
 
-type VantaInstance = {
-  destroy: () => void;
-};
-
 const App: React.FC = () => {
   const profileImage = `${import.meta.env.BASE_URL}profile-2026.png`;
   const profileFallbackImage = `${import.meta.env.BASE_URL}profile.jpg`;
-  const vantaRef = useRef<HTMLDivElement | null>(null);
-  const vantaEffectRef = useRef<VantaInstance | null>(null);
+
 
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     if (typeof window !== 'undefined') {
@@ -88,82 +83,20 @@ const App: React.FC = () => {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  useEffect(() => {
-    const runtime = window as Window & {
-      VANTA?: {
-        WAVES?: (options: Record<string, unknown>) => VantaInstance;
-      };
-      THREE?: unknown;
-    };
 
-    if (prefersReducedMotion || !vantaRef.current) {
-      if (vantaEffectRef.current) {
-        vantaEffectRef.current.destroy();
-        vantaEffectRef.current = null;
-      }
-      return;
-    }
-
-    if (!runtime.THREE || !runtime.VANTA?.WAVES) return;
-
-    if (vantaEffectRef.current) {
-      vantaEffectRef.current.destroy();
-    }
-
-    const themeOptions =
-      theme === 'dark'
-        ? {
-            backgroundColor: 0x040917,
-            color: 0x3a6bc5,
-            shininess: 58,
-            waveHeight: 20,
-            waveSpeed: 0.78,
-            zoom: 1.03,
-          }
-        : {
-            backgroundColor: 0xf5efe3,
-            color: 0xb6884b,
-            shininess: 72,
-            waveHeight: 17,
-            waveSpeed: 0.7,
-            zoom: 0.98,
-          };
-
-    vantaEffectRef.current = runtime.VANTA.WAVES({
-      el: vantaRef.current,
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200,
-      minWidth: 200,
-      scale: 1,
-      scaleMobile: 1,
-      ...themeOptions,
-    });
-
-    return () => {
-      if (vantaEffectRef.current) {
-        vantaEffectRef.current.destroy();
-        vantaEffectRef.current = null;
-      }
-    };
-  }, [theme, prefersReducedMotion]);
 
   const toggleTheme = () => {
     setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
   };
 
   return (
-    <div className="min-h-screen selection:bg-blue-500/30 overflow-x-hidden bg-surface text-content pb-24 sm:pb-32">
-      <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-        <div
-          id="portfolio-vanta-waves"
-          ref={vantaRef}
-          className={`absolute inset-0 transition-opacity duration-500 ${theme === 'dark' ? 'opacity-55' : 'opacity-75'}`}
-        />
-        <div className="glass-orb w-36 h-36 top-[10%] left-[6%]"></div>
-        <div className="glass-orb w-28 h-28 top-[58%] right-[10%]"></div>
-        <div className="glass-orb w-20 h-20 bottom-[18%] left-[18%]"></div>
+    <>
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${theme === 'dark' ? 'bg-dark.png' : 'bg-light.jpg'})` }} />
+        <div className={`absolute inset-0 transition-colors duration-500 ${theme === 'dark' ? 'bg-black/15' : 'bg-white/5'}`} />
+        <div className={`liquid-blob liquid-blob-1 w-72 h-72 top-[5%] left-[2%] ${theme === 'dark' ? 'bg-blue-500/30' : 'bg-blue-400/25'}`}></div>
+        <div className={`liquid-blob liquid-blob-2 w-80 h-80 bottom-[10%] right-[2%] ${theme === 'dark' ? 'bg-emerald-500/25' : 'bg-emerald-400/20'}`}></div>
+        <div className={`liquid-blob liquid-blob-3 w-64 h-64 top-[45%] left-[45%] ${theme === 'dark' ? 'bg-violet-500/20' : 'bg-violet-400/20'}`}></div>
         {enableDynamicBackground && (
           <>
             <motion.div
@@ -208,6 +141,7 @@ const App: React.FC = () => {
         <div className="absolute inset-0 mesh-grid opacity-20"></div>
       </div>
 
+      <div className="relative min-h-screen selection:bg-blue-500/30 overflow-x-hidden text-content pb-24 sm:pb-32">
       <nav className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 px-3 sm:px-5 py-2 sm:py-2.5 paper-panel rounded-full flex items-center gap-2 sm:gap-3 md:gap-6 shadow-2xl overflow-x-auto max-w-[94vw]">
         {['about', 'skills', 'experience', 'projects', 'contact'].map(item => (
           <a
@@ -230,12 +164,12 @@ const App: React.FC = () => {
       </nav>
 
       <header id="about" className="relative min-h-[82vh] w-[90%] max-w-[1400px] mx-auto flex flex-col justify-center pt-8 sm:pt-12">
-        <div className="hero-shell rounded-[2rem] sm:rounded-[2.5rem] p-5 sm:p-7 md:p-8 lg:p-10 grid lg:grid-cols-[1fr_360px] gap-6 sm:gap-10 items-center">
+        <div className="hero-shell glass-liquid rounded-[2rem] sm:rounded-[2.5rem] p-5 sm:p-7 md:p-8 lg:p-10 grid lg:grid-cols-[1fr_360px] gap-6 sm:gap-10 items-center">
           <div className="space-y-6 sm:space-y-10">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
               <div className="flex flex-wrap items-center gap-3">
                 <div className="glass-badge rounded-full px-4 py-2">
-                  <p className="font-mono text-[10px] sm:text-xs font-bold uppercase tracking-[0.35em] text-content-faint">Open to AI + Automation Roles</p>
+                  <p className="font-mono text-[10px] sm:text-xs font-bold uppercase tracking-[0.35em] text-content-faint">AI Developer at SpotCheck</p>
                 </div>
               </div>
               <h1 className="text-4xl xs:text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.88] tracking-tighter text-content">
@@ -251,7 +185,7 @@ const App: React.FC = () => {
                 transition={{ delay: 0.2 }}
                 className="text-base sm:text-lg md:text-lg lg:text-xl leading-relaxed font-medium border-l-4 border-blue-600 pl-4 sm:pl-6 text-content-muted max-w-2xl"
               >
-                Architecting <span className="text-content">scalable automation</span> and <span className="text-content">AI document intelligence</span> for healthcare. I transform manual bottlenecks into high-throughput API workflows.
+                Building <span className="text-content">AI-powered automation</span> at <span className="text-content">SpotCheck Global</span> — turning healthcare complexity into intelligent, high-throughput workflows.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -311,7 +245,7 @@ const App: React.FC = () => {
             className="relative w-full max-w-sm mx-auto lg:mx-0"
           >
             <div className={`absolute inset-0 rounded-full blur-[100px] ${theme === 'dark' ? 'bg-blue-500/20' : 'bg-blue-500/15'}`}></div>
-            <div className="relative z-10 p-3 paper-panel rounded-[56px] overflow-hidden group">
+            <div className="relative z-10 p-3 paper-panel animated-border rounded-[56px] group">
               <div className="absolute top-5 left-5 z-20 glass-badge rounded-2xl px-4 py-3">
                 <p className="text-[9px] uppercase tracking-[0.3em] themed-faint font-black">Current Mode</p>
                 <p className="mt-1 text-sm font-bold text-content">Building resilient systems</p>
@@ -330,7 +264,7 @@ const App: React.FC = () => {
                 <div className="p-5 paper-panel rounded-3xl backdrop-blur-md">
                   <p className="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-2">Identity Verified</p>
                   <p className="font-bold text-content">Savinkumar N</p>
-                  <p className="text-xs text-content-faint">Python Backend Engineer & AI Developer</p>
+                  <p className="text-xs text-content-faint">AI Developer at SpotCheck</p>
                 </div>
               </div>
             </div>
@@ -369,7 +303,7 @@ const App: React.FC = () => {
       </header>
 
       <Section id="skills" title="TECH CORE" subtitle="Capabilities Matrix">
-        <div className="editorial-section p-5 sm:p-8 md:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div className="editorial-section animated-border p-5 sm:p-8 md:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {SKILLS.map((skill, idx) => (
             <motion.div
               key={idx}
@@ -409,18 +343,30 @@ const App: React.FC = () => {
                 <div className="w-2 md:w-3 h-2 md:h-3 rounded-full bg-blue-500 animate-pulse"></div>
               </div>
 
-              <div className={`md:w-1/2 pl-16 md:pl-0 ${idx % 2 === 0 ? 'md:pl-20' : 'md:pr-20 md:text-right'}`}>
+              <motion.div
+                initial={{ opacity: 0, x: idx % 2 === 0 ? -40 : 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.15 }}
+                className={`md:w-1/2 pl-16 md:pl-0 ${idx % 2 === 0 ? 'md:pl-20' : 'md:pr-20 md:text-right'}`}
+              >
                 <span className="text-blue-600 font-mono text-xs sm:text-sm font-bold tracking-widest bg-blue-500/10 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-blue-500/20 inline-block">
                   {exp.period}
                 </span>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-black mt-4 md:mt-6 mb-1 md:mb-2 text-content">{exp.role}</h3>
                 <p className="text-base sm:text-lg md:text-xl font-bold text-content-faint tracking-tight">{exp.company}</p>
-              </div>
+              </motion.div>
 
-              <div className="md:w-1/2 pl-16 md:pl-0">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 + idx * 0.15 }}
+                className="md:w-1/2 pl-16 md:pl-0"
+              >
                 <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className={`p-6 sm:p-8 md:p-10 paper-panel rounded-[32px] md:rounded-[48px] hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 transition-all ${idx % 2 === 0 ? 'md:mr-20' : 'md:ml-20'}`}
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  className={`p-6 sm:p-8 md:p-10 paper-panel animated-border rounded-[32px] md:rounded-[48px] hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 transition-all ${idx % 2 === 0 ? 'md:mr-20' : 'md:ml-20'}`}
                 >
                   <ul className="space-y-4 sm:space-y-6">
                     {exp.points.map((point, pidx) => (
@@ -431,14 +377,14 @@ const App: React.FC = () => {
                     ))}
                   </ul>
                 </motion.div>
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>
       </Section>
 
       <Section id="projects" title="IMPACT ARRAY" subtitle="Selected Operations">
-        <div className="editorial-section p-5 sm:p-8 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
+        <div className="editorial-section animated-border p-5 sm:p-8 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
           {PROJECTS.map((project, idx) => (
             <motion.div
               key={idx}
@@ -498,7 +444,7 @@ const App: React.FC = () => {
               {[
                 { icon: <Mail />, label: PERSONAL_INFO.email, href: `mailto:${PERSONAL_INFO.email}`, color: 'bg-blue-600' },
                 { icon: <Linkedin />, label: 'linkedin/savinkumarn', href: `https://linkedin.com/in/${PERSONAL_INFO.linkedin}`, color: 'bg-indigo-600' },
-                { icon: <Github />, label: 'github/savinkumarnsk', href: 'https://github.com/savinkumarnsk', color: 'bg-slate-800 dark:bg-slate-800' },
+                { icon: <Github />, label: 'github/savinkumarnsk', href: 'https://github.com/savinkumarnsk', color: 'bg-slate-600 dark:bg-slate-800' },
                 { icon: <MessageCircle />, label: 'whatsapp/connect', href: `https://wa.me/${PERSONAL_INFO.phone.replace(/[^0-9]/g, '')}`, color: 'bg-emerald-500' },
               ].map((link, i) => (
                 <motion.a
@@ -537,7 +483,8 @@ const App: React.FC = () => {
       </footer>
 
       <AIChat />
-    </div>
+      </div>
+    </>
   );
 };
 

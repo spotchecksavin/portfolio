@@ -3,7 +3,7 @@ import { Project, Experience, SkillCategory } from './types';
 
 export const PERSONAL_INFO = {
   name: "Savinkumar N",
-  title: "AI/ML Engineer & Backend Developer",
+  title: "AI Developer at SpotCheck",
   email: "savinkumarnsk10@gmail.com",
   phone: "+91 9597934436",
   linkedin: "savinkumarn",
@@ -14,7 +14,7 @@ export const PERSONAL_INFO = {
 
 export const EXPERIENCES: Experience[] = [
   {
-    role: "Backend Engineer - AI & Automation",
+    role: "AI Developer",
     company: "Spotcheck Global",
     location: "Coimbatore, India",
     period: "August 2025 – Present",
@@ -104,14 +104,14 @@ export const SKILLS: SkillCategory[] = [
 
 export const FULL_RESUME_TEXT = `
 SAVINKUMAR N
-AI/ML Engineer & Backend Developer
+AI Developer at SpotCheck
 Email: savinkumarnsk10@gmail.com | Mobile: +91 9597934436
 
 PROFESSIONAL SUMMARY
 AI/ML Engineer with 1+ year of production experience building LLM-powered automation systems and healthcare AI platforms. Specialized in GenAI applications, RAG architectures, LLM fine-tuning, and MLOps.
 
 EXPERIENCE
-Spotcheck Global - Backend Engineer - AI & Automation (Aug 2025 - Present)
+Spotcheck Global - AI Developer (Aug 2025 - Present)
 - Architected production-grade healthcare AI platform processing 100,000+ daily transactions with 80% latency reduction
 - Engineered end-to-end Document Intelligence pipeline combining OCR with LLM-based extraction (95% accuracy)
 - Optimized distributed billing workflow system improving throughput by 90%
