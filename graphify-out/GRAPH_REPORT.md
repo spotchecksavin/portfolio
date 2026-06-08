@@ -1,16 +1,16 @@
 # Graph Report - portfolio  (2026-06-08)
 
 ## Corpus Check
-- 17 files · ~99,843 words
+- 18 files · ~271,669 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 104 nodes · 102 edges · 15 communities (11 shown, 4 thin omitted)
+- 107 nodes · 104 edges · 16 communities (11 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3bb47814`
+- Built from commit: `e9d1b6f6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -28,6 +28,7 @@
 - [[_COMMUNITY_Community 10|Community 10]]
 - [[_COMMUNITY_Community 13|Community 13]]
 - [[_COMMUNITY_Community 14|Community 14]]
+- [[_COMMUNITY_Community 15|Community 15]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 16 edges
@@ -47,7 +48,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (15 total, 4 thin omitted)
+## Communities (16 total, 5 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.11
@@ -59,7 +60,7 @@ Nodes (13): 🌐 Access Your Site, GitHub Pages Deployment Guide, 📊 Monitor D
 
 ### Community 2 - "Community 2"
 Cohesion: 0.17
-Nodes (11): homepage, name, private, scripts, build, deploy, dev, lint (+3 more)
+Nodes (11): devDependencies, gh-pages, @types/node, typescript, vite, @vitejs/plugin-react, homepage, name (+3 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.20
@@ -83,20 +84,22 @@ Nodes (3): description, name, requestFramePermissions
 
 ### Community 8 - "Community 8"
 Cohesion: 0.33
-Nodes (6): devDependencies, gh-pages, @types/node, typescript, vite, @vitejs/plugin-react
+Nodes (6): scripts, build, deploy, dev, lint, preview
 
 ## Knowledge Gaps
-- **65 isolated node(s):** `PreToolUse`, `VantaInstance`, `SUGGESTIONS`, `SectionProps`, `rootElement` (+60 more)
+- **67 isolated node(s):** `PreToolUse`, `SUGGESTIONS`, `SectionProps`, `rootElement`, `root` (+62 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `dependencies` connect `Community 4` to `Community 2`?**
-  _High betweenness centrality (0.028) - this node is a cross-community bridge._
-- **What connects `PreToolUse`, `VantaInstance`, `SUGGESTIONS` to the rest of the system?**
-  _65 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+- **Why does `scripts` connect `Community 8` to `Community 2`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
+- **What connects `PreToolUse`, `SUGGESTIONS`, `SectionProps` to the rest of the system?**
+  _67 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

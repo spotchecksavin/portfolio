@@ -185,7 +185,7 @@ const App: React.FC = () => {
                 transition={{ delay: 0.2 }}
                 className="text-base sm:text-lg md:text-lg lg:text-xl leading-relaxed font-medium border-l-4 border-blue-600 pl-4 sm:pl-6 text-content-muted max-w-2xl"
               >
-                Building <span className="text-content">AI-powered automation</span> at <span className="text-content">SpotCheck Global</span> — turning healthcare complexity into intelligent, high-throughput workflows.
+                Building <span className="text-content">AI, ML & LMM solutions</span> — turning complex data into <span className="text-content">intelligent, production‑ready systems</span>.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -196,15 +196,15 @@ const App: React.FC = () => {
                 <div className="grid gap-3 sm:grid-cols-3">
                   <div className="rounded-2xl bg-white/70 dark:bg-slate-900/50 border border-white/60 dark:border-white/10 p-4">
                     <p className="text-[10px] uppercase tracking-[0.28em] themed-faint font-black">Focus</p>
-                    <p className="mt-2 text-sm font-bold text-content">AI document pipelines</p>
+                    <p className="mt-2 text-sm font-bold text-content">LLM fine-tuning & alignment</p>
                   </div>
                   <div className="rounded-2xl bg-white/70 dark:bg-slate-900/50 border border-white/60 dark:border-white/10 p-4">
                     <p className="text-[10px] uppercase tracking-[0.28em] themed-faint font-black">Stack</p>
-                    <p className="mt-2 text-sm font-bold text-content">Python, APIs, OCR</p>
+                    <p className="mt-2 text-sm font-bold text-content">PyTorch, LoRA, Transformers</p>
                   </div>
                   <div className="rounded-2xl bg-white/70 dark:bg-slate-900/50 border border-white/60 dark:border-white/10 p-4">
                     <p className="text-[10px] uppercase tracking-[0.28em] themed-faint font-black">Domain</p>
-                    <p className="mt-2 text-sm font-bold text-content">Healthcare ops</p>
+                    <p className="mt-2 text-sm font-bold text-content">Multimodal & LMM research</p>
                   </div>
                 </div>
               </motion.div>
@@ -218,12 +218,12 @@ const App: React.FC = () => {
             >
               <a href="#projects" className="group relative w-full sm:w-auto px-7 sm:px-8 py-3.5 sm:py-4 font-black uppercase tracking-widest text-[11px] rounded-2xl overflow-hidden transition-all hover:scale-105 active:scale-95 bg-inverted-surface text-inverted-content hover:bg-inverted-surface/90 shadow-[0_20px_45px_-24px_rgba(37,99,235,0.55)]">
                 <span className="relative z-10 flex items-center justify-center sm:justify-start gap-2 group-hover:text-white transition-colors">
-                  Access Portfolio <ChevronRight size={16} />
+                  View Models <ChevronRight size={16} />
                 </span>
                 <div className="absolute inset-0 bg-blue-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
               </a>
               <a href="#contact" className="w-full sm:w-auto paper-panel rounded-2xl px-6 sm:px-7 py-3.5 sm:py-4 font-black uppercase tracking-widest text-[11px] text-content hover:border-blue-500/30 hover:-translate-y-0.5 transition-all">
-                Start a Project
+                Fine‑tune a Model
               </a>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 themed-muted font-mono text-xs w-full sm:w-auto">
                 <div className="flex items-center gap-2">
@@ -232,7 +232,7 @@ const App: React.FC = () => {
                 </div>
                 <div className="hidden md:flex items-center gap-2">
                   <Terminal size={14} className="text-emerald-500 flex-shrink-0" />
-                  <span>Python / AI / Automation</span>
+                  <span>PyTorch / LoRA / LMMs</span>
                 </div>
               </div>
             </motion.div>
@@ -248,12 +248,12 @@ const App: React.FC = () => {
             <div className="relative z-10 p-3 paper-panel animated-border rounded-[56px] group">
               <div className="absolute top-5 left-5 z-20 glass-badge rounded-2xl px-4 py-3">
                 <p className="text-[9px] uppercase tracking-[0.3em] themed-faint font-black">Current Mode</p>
-                <p className="mt-1 text-sm font-bold text-content">Building resilient systems</p>
+                <p className="mt-1 text-sm font-bold text-content">Fine‑tuning LMMs</p>
               </div>
               <img
                 src={profileImage}
                 alt="Savinkumar N"
-                className={`w-full aspect-[2/3] object-cover rounded-[40px] transition-all duration-700 scale-100 lg:scale-105 group-hover:scale-100 ${theme === 'dark' ? 'grayscale group-hover:grayscale-0' : ''}`}
+                className={`w-full aspect-[2/3] object-cover rounded-[40px] transition-all duration-700 ${theme === 'dark' ? 'scale-100 lg:scale-105 group-hover:scale-100 grayscale group-hover:grayscale-0' : 'scale-100'}`}
                 onError={e => {
                   e.currentTarget.onerror = null;
                   e.currentTarget.src = profileFallbackImage;
