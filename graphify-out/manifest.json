@@ -60,8 +60,8 @@
     "semantic_hash": ""
   },
   "D:\\SAVIN\\portfolio\\portfolio\\.github\\workflows\\deploy.yml": {
-    "mtime": 1774930483.489071,
-    "ast_hash": "d1296f790809cdfc79331df80d8a38cd",
+    "mtime": 1780903000.7291682,
+    "ast_hash": "ded1fa296db8daccc6b4d7180d5ccfd1",
     "semantic_hash": ""
   },
   "D:\\SAVIN\\portfolio\\portfolio\\GITHUB_PAGES_SETUP.md": {
@@ -107,6 +107,11 @@
   "D:\\SAVIN\\portfolio\\portfolio\\public\\profile-2026.png": {
     "mtime": 1770864898.9410791,
     "ast_hash": "ee9ecfbad9b5b4f4de319d946f511321",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\public\\404.html": {
+    "mtime": 1780903001.9859748,
+    "ast_hash": "085348c5c4f9a9bd0b3f699d1f7923e3",
     "semantic_hash": ""
   }
 }
