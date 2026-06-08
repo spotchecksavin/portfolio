@@ -90,7 +90,7 @@
       "source_file": "components/Section.tsx",
       "source_location": "L1",
       "id": "components_section",
-      "community": 9,
+      "community": 3,
       "norm_label": "section.tsx"
     },
     {
@@ -99,7 +99,7 @@
       "source_file": "components/Section.tsx",
       "source_location": "L5",
       "id": "components_section_sectionprops",
-      "community": 9,
+      "community": 3,
       "norm_label": "sectionprops"
     },
     {
@@ -108,7 +108,7 @@
       "source_file": "components/Section.tsx",
       "source_location": "L13",
       "id": "components_section_section",
-      "community": 9,
+      "community": 3,
       "norm_label": "section()"
     },
     {
@@ -162,7 +162,7 @@
       "source_file": "index.tsx",
       "source_location": "L1",
       "id": "index",
-      "community": 3,
+      "community": 9,
       "norm_label": "index.tsx"
     },
     {
@@ -171,7 +171,7 @@
       "source_file": "index.tsx",
       "source_location": "L6",
       "id": "index_rootelement",
-      "community": 3,
+      "community": 9,
       "norm_label": "rootelement"
     },
     {
@@ -180,7 +180,7 @@
       "source_file": "index.tsx",
       "source_location": "L11",
       "id": "index_root",
-      "community": 3,
+      "community": 9,
       "norm_label": "root"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "package.json",
       "source_location": "L7",
       "id": "package_scripts",
-      "community": 8,
+      "community": 2,
       "norm_label": "scripts"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "package.json",
       "source_location": "L8",
       "id": "package_scripts_dev",
-      "community": 8,
+      "community": 2,
       "norm_label": "dev"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "package.json",
       "source_location": "L9",
       "id": "package_scripts_build",
-      "community": 8,
+      "community": 2,
       "norm_label": "build"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "package.json",
       "source_location": "L10",
       "id": "package_scripts_preview",
-      "community": 8,
+      "community": 2,
       "norm_label": "preview"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "package.json",
       "source_location": "L11",
       "id": "package_scripts_lint",
-      "community": 8,
+      "community": 2,
       "norm_label": "lint"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "package.json",
       "source_location": "L12",
       "id": "package_scripts_deploy",
-      "community": 8,
+      "community": 2,
       "norm_label": "deploy"
     },
     {
@@ -405,7 +405,7 @@
       "source_file": "package.json",
       "source_location": "L23",
       "id": "package_devdependencies",
-      "community": 2,
+      "community": 8,
       "norm_label": "devdependencies"
     },
     {
@@ -414,7 +414,7 @@
       "source_file": "package.json",
       "source_location": "L24",
       "id": "package_devdependencies_types_node",
-      "community": 2,
+      "community": 8,
       "norm_label": "@types/node"
     },
     {
@@ -423,7 +423,7 @@
       "source_file": "package.json",
       "source_location": "L25",
       "id": "package_devdependencies_vitejs_plugin_react",
-      "community": 2,
+      "community": 8,
       "norm_label": "@vitejs/plugin-react"
     },
     {
@@ -432,7 +432,7 @@
       "source_file": "package.json",
       "source_location": "L26",
       "id": "package_devdependencies_gh_pages",
-      "community": 2,
+      "community": 8,
       "norm_label": "gh-pages"
     },
     {
@@ -441,7 +441,7 @@
       "source_file": "package.json",
       "source_location": "L27",
       "id": "package_devdependencies_typescript",
-      "community": 2,
+      "community": 8,
       "norm_label": "typescript"
     },
     {
@@ -450,7 +450,7 @@
       "source_file": "package.json",
       "source_location": "L28",
       "id": "package_devdependencies_vite",
-      "community": 2,
+      "community": 8,
       "norm_label": "vite"
     },
     {
@@ -463,19 +463,19 @@
       "norm_label": "geminiservice.ts"
     },
     {
-      "label": "ai",
+      "label": "apiKey",
       "file_type": "code",
       "source_file": "services/geminiService.ts",
       "source_location": "L5",
-      "id": "services_geminiservice_ai",
+      "id": "services_geminiservice_apikey",
       "community": 5,
-      "norm_label": "ai"
+      "norm_label": "apikey"
     },
     {
       "label": "askAiAboutSavin()",
       "file_type": "code",
       "source_file": "services/geminiService.ts",
-      "source_location": "L7",
+      "source_location": "L8",
       "id": "services_geminiservice_askaiaboutsavin",
       "community": 5,
       "norm_label": "askaiaboutsavin()"
@@ -929,6 +929,15 @@
       "id": "readme_run_locally",
       "community": 10,
       "norm_label": "run locally"
+    },
+    {
+      "label": "ai",
+      "file_type": "code",
+      "source_file": "services/geminiService.ts",
+      "source_location": "L5",
+      "community": 5,
+      "norm_label": "ai",
+      "id": "services_geminiservice_ai"
     }
   ],
   "links": [
@@ -968,9 +977,9 @@
       "source_file": "App.tsx",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app",
-      "target": "app_vantainstance",
-      "confidence_score": 1.0
+      "target": "app_vantainstance"
     },
     {
       "relation": "imports_from",
@@ -1531,6 +1540,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "services/geminiService.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "services_geminiservice",
+      "target": "services_geminiservice_apikey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/geminiService.ts",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -1959,5 +1978,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f179be395d5f00d62c7708e84515fe12cb7ebf22"
+  "built_at_commit": "3bb478143f2f3c0a50ea0bf740af3a4ba568313d"
 }

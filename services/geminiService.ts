@@ -2,9 +2,14 @@
 import { GoogleGenAI } from "@google/genai";
 import { FULL_RESUME_TEXT } from "../constants";
 
-const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || '' });
+const apiKey = (process.env.GEMINI_API_KEY || '').trim();
+const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
 
 export const askAiAboutSavin = async (question: string) => {
+  if (!ai) {
+    return "The AI assistant is not configured in this deployment yet, but you can still explore Savin's projects and contact links below.";
+  }
+
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
