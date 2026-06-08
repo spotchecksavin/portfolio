@@ -40,19 +40,10 @@
       "norm_label": "app.tsx"
     },
     {
-      "label": "VantaInstance",
-      "file_type": "code",
-      "source_file": "App.tsx",
-      "source_location": "L23",
-      "id": "app_vantainstance",
-      "community": 3,
-      "norm_label": "vantainstance"
-    },
-    {
       "label": "App()",
       "file_type": "code",
       "source_file": "App.tsx",
-      "source_location": "L27",
+      "source_location": "L23",
       "id": "app_app",
       "community": 3,
       "norm_label": "app()"
@@ -220,6 +211,33 @@
       "norm_label": "requestframepermissions"
     },
     {
+      "label": "opencode.json",
+      "file_type": "code",
+      "source_file": "opencode.json",
+      "source_location": "L1",
+      "id": "opencode",
+      "community": 15,
+      "norm_label": "opencode.json"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "opencode.json",
+      "source_location": "L2",
+      "id": "opencode_schema",
+      "community": 15,
+      "norm_label": "$schema"
+    },
+    {
+      "label": "lsp",
+      "file_type": "code",
+      "source_file": "opencode.json",
+      "source_location": "L3",
+      "id": "opencode_lsp",
+      "community": 15,
+      "norm_label": "lsp"
+    },
+    {
       "label": "package.json",
       "file_type": "code",
       "source_file": "package.json",
@@ -279,7 +297,7 @@
       "source_file": "package.json",
       "source_location": "L7",
       "id": "package_scripts",
-      "community": 2,
+      "community": 8,
       "norm_label": "scripts"
     },
     {
@@ -288,7 +306,7 @@
       "source_file": "package.json",
       "source_location": "L8",
       "id": "package_scripts_dev",
-      "community": 2,
+      "community": 8,
       "norm_label": "dev"
     },
     {
@@ -297,7 +315,7 @@
       "source_file": "package.json",
       "source_location": "L9",
       "id": "package_scripts_build",
-      "community": 2,
+      "community": 8,
       "norm_label": "build"
     },
     {
@@ -306,7 +324,7 @@
       "source_file": "package.json",
       "source_location": "L10",
       "id": "package_scripts_preview",
-      "community": 2,
+      "community": 8,
       "norm_label": "preview"
     },
     {
@@ -315,7 +333,7 @@
       "source_file": "package.json",
       "source_location": "L11",
       "id": "package_scripts_lint",
-      "community": 2,
+      "community": 8,
       "norm_label": "lint"
     },
     {
@@ -324,7 +342,7 @@
       "source_file": "package.json",
       "source_location": "L12",
       "id": "package_scripts_deploy",
-      "community": 2,
+      "community": 8,
       "norm_label": "deploy"
     },
     {
@@ -405,7 +423,7 @@
       "source_file": "package.json",
       "source_location": "L23",
       "id": "package_devdependencies",
-      "community": 8,
+      "community": 2,
       "norm_label": "devdependencies"
     },
     {
@@ -414,7 +432,7 @@
       "source_file": "package.json",
       "source_location": "L24",
       "id": "package_devdependencies_types_node",
-      "community": 8,
+      "community": 2,
       "norm_label": "@types/node"
     },
     {
@@ -423,7 +441,7 @@
       "source_file": "package.json",
       "source_location": "L25",
       "id": "package_devdependencies_vitejs_plugin_react",
-      "community": 8,
+      "community": 2,
       "norm_label": "@vitejs/plugin-react"
     },
     {
@@ -432,7 +450,7 @@
       "source_file": "package.json",
       "source_location": "L26",
       "id": "package_devdependencies_gh_pages",
-      "community": 8,
+      "community": 2,
       "norm_label": "gh-pages"
     },
     {
@@ -441,7 +459,7 @@
       "source_file": "package.json",
       "source_location": "L27",
       "id": "package_devdependencies_typescript",
-      "community": 8,
+      "community": 2,
       "norm_label": "typescript"
     },
     {
@@ -450,7 +468,7 @@
       "source_file": "package.json",
       "source_location": "L28",
       "id": "package_devdependencies_vite",
-      "community": 8,
+      "community": 2,
       "norm_label": "vite"
     },
     {
@@ -931,6 +949,15 @@
       "norm_label": "run locally"
     },
     {
+      "label": "VantaInstance",
+      "file_type": "code",
+      "source_file": "App.tsx",
+      "source_location": "L23",
+      "community": 3,
+      "norm_label": "vantainstance",
+      "id": "app_vantainstance"
+    },
+    {
       "label": "ai",
       "file_type": "code",
       "source_file": "services/geminiService.ts",
@@ -1279,6 +1306,26 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "opencode.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "opencode",
+      "target": "opencode_lsp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "opencode.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "opencode",
+      "target": "opencode_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "package.json",
       "source_location": "L14",
       "weight": 1.0,
@@ -1542,9 +1589,9 @@
       "source_file": "services/geminiService.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_geminiservice",
-      "target": "services_geminiservice_apikey",
-      "confidence_score": 1.0
+      "target": "services_geminiservice_apikey"
     },
     {
       "relation": "contains",
@@ -1978,5 +2025,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "3bb478143f2f3c0a50ea0bf740af3a4ba568313d"
+  "built_at_commit": "e9d1b6f6bc13df1620ba18c5bf03f8515874d57d"
 }

@@ -1,7 +1,7 @@
 {
   "D:\\SAVIN\\portfolio\\portfolio\\App.tsx": {
-    "mtime": 1780310463.4701033,
-    "ast_hash": "a62cf1cbde9e90ff4e06252c68b9d40d",
+    "mtime": 1780932209.31169,
+    "ast_hash": "7829f295f7afe7a34f4ea55c069b661f",
     "semantic_hash": ""
   },
   "D:\\SAVIN\\portfolio\\portfolio\\components\\AIChat.tsx": {
@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "D:\\SAVIN\\portfolio\\portfolio\\constants.ts": {
-    "mtime": 1773386696.316543,
-    "ast_hash": "6e8e77445d3f0d70b6445fdd9f49315f",
+    "mtime": 1780917117.588564,
+    "ast_hash": "2d51f5a080c561cf577c01a7ed90f795",
     "semantic_hash": ""
   },
   "D:\\SAVIN\\portfolio\\portfolio\\index.tsx": {
@@ -75,8 +75,8 @@
     "semantic_hash": ""
   },
   "D:\\SAVIN\\portfolio\\portfolio\\index.html": {
-    "mtime": 1780310471.667973,
-    "ast_hash": "7e4bc49e0ff2fdc70f661089b9121623",
+    "mtime": 1780920322.9946985,
+    "ast_hash": "01e07af0c85172d9de7d6108643e882f",
     "semantic_hash": ""
   },
   "D:\\SAVIN\\portfolio\\portfolio\\public\\profile.jpg": {
@@ -112,6 +112,26 @@
   "D:\\SAVIN\\portfolio\\portfolio\\public\\404.html": {
     "mtime": 1780903001.9859748,
     "ast_hash": "085348c5c4f9a9bd0b3f699d1f7923e3",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\opencode.json": {
+    "mtime": 1780916479.741607,
+    "ast_hash": "436ac4320e8791d684502dbf770628d5",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\public\\bg-alienware.jpg": {
+    "mtime": 1780920268.59883,
+    "ast_hash": "d07f37680f83da6de36ce3618b4e82bf",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\public\\bg-dark.png": {
+    "mtime": 1780921806.4766262,
+    "ast_hash": "a9102b9c76f6f3bc7349f539f9b0ef27",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\public\\bg-light.jpg": {
+    "mtime": 1780921366.1692057,
+    "ast_hash": "974da81214f475c1b0010225047fd573",
     "semantic_hash": ""
   }
 }
