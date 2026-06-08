@@ -10,14 +10,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #030712;
+            color-scheme: light dark;
+            --bg-color: #f6efe5;
+            --text-color: #1f2937;
+            --scroll-track: #f3e8da;
+            --scroll-thumb: #cbd5e1;
             --accent-blue: #3b82f6;
             --accent-emerald: #10b981;
+        }
+        html.dark {
+            --bg-color: #030712;
+            --text-color: #f8fafc;
+            --scroll-track: #020617;
+            --scroll-thumb: #1f2937;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #030712;
+                --text-color: #f8fafc;
+                --scroll-track: #020617;
+                --scroll-thumb: #1f2937;
+            }
         }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
-            color: #f8fafc;
+            color: var(--text-color);
             overflow-x: hidden;
         }
         .font-mono {
@@ -58,13 +76,25 @@
             width: 5px;
         }
         ::-webkit-scrollbar-track {
-            background: #030712;
+            background: var(--scroll-track);
         }
         ::-webkit-scrollbar-thumb {
-            background: #1f2937;
+            background: var(--scroll-thumb);
             border-radius: 10px;
         }
     </style>
+<script>
+    (() => {
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            root.classList.add('dark');
+        } else {
+            root.classList.remove('dark');
+        }
+    })();
+</script>
 <script type="importmap">
 {
   "imports": {
@@ -80,6 +110,8 @@
 <body class="mesh-grid">
     <div class="scanline"></div>
     <div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 <script type="module" src="/index.tsx"></script>
 </body>
 </html>

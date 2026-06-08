@@ -1,0 +1,4 @@
+interface:
+  display_name: "Auto Graphify Update"
+  short_description: "Run graphify update after code changes"
+  default_prompt: "Use this skill to update graphify graph artifacts after repo edits."

@@ -1,0 +1,112 @@
+{
+  "D:\\SAVIN\\portfolio\\portfolio\\App.tsx": {
+    "mtime": 1780310463.4701033,
+    "ast_hash": "a62cf1cbde9e90ff4e06252c68b9d40d",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\components\\AIChat.tsx": {
+    "mtime": 1778514421.7445714,
+    "ast_hash": "68446cfd8d3a104b8d395035d8c58ef9",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\components\\Section.tsx": {
+    "mtime": 1780308696.0759325,
+    "ast_hash": "fb1e3f395307ac287c713b4b38f9b5ed",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\constants.ts": {
+    "mtime": 1773386696.316543,
+    "ast_hash": "6e8e77445d3f0d70b6445fdd9f49315f",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\index.tsx": {
+    "mtime": 1771945706.2240405,
+    "ast_hash": "b77e92e26ae6b253f8637a8e630d997d",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\metadata.json": {
+    "mtime": 1771945706.2245681,
+    "ast_hash": "9851932d78bdd4c29bccbeb2fe3bc6a4",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\package.json": {
+    "mtime": 1774930494.490198,
+    "ast_hash": "99b2e9852ff95a1e7d18786cc56a25a1",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\services\\geminiService.ts": {
+    "mtime": 1771946092.6175685,
+    "ast_hash": "ac0c65879d4063754538c5ea06939a62",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\tailwind.config.ts": {
+    "mtime": 1774889912.9822478,
+    "ast_hash": "087d6804d65064b16df1aa04fae53606",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\tsconfig.json": {
+    "mtime": 1771945706.227323,
+    "ast_hash": "d85c3835f14e6fb1b5a6e7b1a66d3f63",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\types.ts": {
+    "mtime": 1771945706.2285812,
+    "ast_hash": "1bcb521db803cdabde2af829d31ebb30",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\vite.config.ts": {
+    "mtime": 1774930488.2395296,
+    "ast_hash": "09214324460f31efaa7cb8ae871bbc66",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\.github\\workflows\\deploy.yml": {
+    "mtime": 1774930483.489071,
+    "ast_hash": "d1296f790809cdfc79331df80d8a38cd",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\GITHUB_PAGES_SETUP.md": {
+    "mtime": 1774890012.7831357,
+    "ast_hash": "357400d2ccea02bc6d347bfdfb16f863",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\README.md": {
+    "mtime": 1771945706.2195148,
+    "ast_hash": "b67dfd4d5dcb8a682031fa8cea5ce8aa",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\index.html": {
+    "mtime": 1780310471.667973,
+    "ast_hash": "7e4bc49e0ff2fdc70f661089b9121623",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\public\\profile.jpg": {
+    "mtime": 1771946956.0908577,
+    "ast_hash": "65efc4a61df7baee197b2a30bd004574",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\.codex\\hooks.json": {
+    "mtime": 1780298467.0544856,
+    "ast_hash": "a659614f316f296d59b5eb7d5b9f58f0",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\.codex\\skills\\auto-graphify-update\\SKILL.md": {
+    "mtime": 1780299258.0431616,
+    "ast_hash": "95e7e2fbae36f506002cd71ce7174ee9",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\.codex\\skills\\auto-graphify-update\\agents\\openai.yaml": {
+    "mtime": 1780299083.4464393,
+    "ast_hash": "aa0a5b1b7635d0c64a77be8067025730",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\AGENTS.md": {
+    "mtime": 1780299265.0751433,
+    "ast_hash": "0fcc71ac89a51c7b012816f8aba04a63",
+    "semantic_hash": ""
+  },
+  "D:\\SAVIN\\portfolio\\portfolio\\public\\profile-2026.png": {
+    "mtime": 1770864898.9410791,
+    "ast_hash": "ee9ecfbad9b5b4f4de319d946f511321",
+    "semantic_hash": ""
+  }
+}

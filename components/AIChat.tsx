@@ -46,16 +46,16 @@ const AIChat: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-16 sm:bottom-6 right-3 sm:right-6 z-50 flex flex-col items-end gap-2 sm:gap-4">
+    <div className="fixed bottom-14 sm:bottom-5 right-3 sm:right-5 z-50 flex flex-col items-end gap-2 sm:gap-3">
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="w-[calc(100vw-1.5rem)] sm:w-80 md:w-[400px] h-[500px] sm:h-[550px] glass bg-surface rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden"
+            className="w-[calc(100vw-1.5rem)] sm:w-72 md:w-[360px] h-[460px] sm:h-[500px] glass rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden"
           >
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-3 sm:p-5 flex justify-between items-center shadow-lg">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-3 sm:p-4 flex justify-between items-center shadow-lg">
               <div className="flex items-center gap-2 sm:gap-3">
                 <div className="relative">
                   <div className="w-8 sm:w-10 h-8 sm:h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md">
@@ -86,12 +86,12 @@ const AIChat: React.FC = () => {
               </div>
             </div>
 
-            <div ref={scrollRef} className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 scroll-smooth bg-surface-secondary">
+            <div ref={scrollRef} className="flex-1 overflow-y-auto p-3 sm:p-3.5 space-y-3 scroll-smooth themed-soft">
               {messages.map((msg, idx) => (
                 <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  <div className={`max-w-[85%] px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm leading-relaxed ${msg.role === 'user'
+                  <div className={`max-w-[85%] px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-2xl text-xs sm:text-sm leading-relaxed ${msg.role === 'user'
                     ? 'bg-blue-600 text-white rounded-tr-none shadow-md shadow-blue-500/20'
-                    : 'bg-surface text-content rounded-tl-none border border-black/5 dark:border-white/10 shadow-sm'
+                    : 'themed-panel text-content rounded-tl-none shadow-sm'
                     }`}>
                     {msg.text}
                   </div>
@@ -99,11 +99,11 @@ const AIChat: React.FC = () => {
               ))}
               {loading && (
                 <div className="flex justify-start">
-                  <div className="bg-surface border border-black/5 dark:border-white/10 shadow-sm px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm text-content-faint flex items-center gap-2">
+                  <div className="themed-panel shadow-sm px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-2xl text-xs sm:text-sm themed-faint flex items-center gap-2">
                     <div className="flex gap-1">
-                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce [animation-delay:0.2s]"></div>
-                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce [animation-delay:0.4s]"></div>
+                      <div className="w-1.5 h-1.5 bg-content-faint rounded-full animate-bounce"></div>
+                      <div className="w-1.5 h-1.5 bg-content-faint rounded-full animate-bounce [animation-delay:0.2s]"></div>
+                      <div className="w-1.5 h-1.5 bg-content-faint rounded-full animate-bounce [animation-delay:0.4s]"></div>
                     </div>
                     Analyzing...
                   </div>
@@ -112,12 +112,12 @@ const AIChat: React.FC = () => {
             </div>
 
             {messages.length < 5 && !loading && (
-              <div className="px-3 sm:px-4 pb-2 pt-2 bg-surface-secondary flex flex-col xss:flex-wrap gap-2">
+              <div className="px-3 sm:px-3.5 pb-2 pt-2 themed-soft flex flex-col xss:flex-wrap gap-2">
                 {SUGGESTIONS.map((s, i) => (
                   <button
                     key={i}
                     onClick={() => handleSend(s)}
-                    className="w-full text-[9px] sm:text-[10px] bg-surface border border-black/5 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/10 hover:text-content text-content-faint px-2 sm:px-3 py-1 sm:py-1.5 rounded-full transition-colors whitespace-nowrap sm:whitespace-normal sm:flex-1 shadow-sm"
+                    className="w-full text-[9px] sm:text-[10px] themed-panel hover:bg-blue-500/10 dark:hover:bg-white/10 hover:text-content text-content px-2 sm:px-3 py-1 sm:py-1.5 rounded-full transition-colors whitespace-nowrap sm:whitespace-normal sm:flex-1 shadow-sm"
                   >
                     {s}
                   </button>
@@ -125,13 +125,13 @@ const AIChat: React.FC = () => {
               </div>
             )}
 
-            <div className="p-3 sm:p-4 border-t border-black/5 dark:border-white/5 bg-surface flex gap-2">
+            <div className="p-3 sm:p-3.5 border-t themed-border themed-panel flex gap-2">
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSend()}
                 placeholder="Ask about Savin..."
-                className="flex-1 bg-surface-secondary border border-black/5 dark:border-white/10 rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm focus:outline-none focus:border-blue-500/50 text-content placeholder:text-content-faint transition-all"
+                className="flex-1 themed-soft border themed-border rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm focus:outline-none focus:border-blue-500/50 text-content placeholder:text-content-faint transition-all"
               />
               <button
                 onClick={() => handleSend()}
@@ -152,10 +152,10 @@ const AIChat: React.FC = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsOpen(true)}
-          className="w-12 sm:w-16 h-12 sm:h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/40 group overflow-hidden relative flex-shrink-0"
+          className="w-12 sm:w-14 h-12 sm:h-14 bg-blue-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/40 group overflow-hidden relative flex-shrink-0"
         >
           <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <MessageSquare className="w-6 sm:w-8 h-6 sm:h-8 text-white relative z-10" />
+          <MessageSquare className="w-6 sm:w-7 h-6 sm:h-7 text-white relative z-10" />
         </motion.button>
       )}
     </div>
