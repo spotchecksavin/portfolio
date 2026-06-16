@@ -4,17 +4,7 @@ Your portfolio is now configured for automatic deployment to GitHub Pages!
 
 ## 📋 Setup Instructions
 
-### Step 1: Add GitHub Secrets (If Using API Keys)
-If your project uses the Gemini API or other secrets:
-
-1. Go to your GitHub repository: https://github.com/spotchecksavin/portfolio
-2. Click **Settings** → **Secrets and variables** → **Actions**
-3. Click **New repository secret**
-4. Add your secrets:
-   - Name: `GEMINI_API_KEY`
-   - Value: Your API key
-
-### Step 2: Enable GitHub Pages
+### Step 1: Enable GitHub Pages
 1. Go to **Settings** → **Pages**
 2. Under "Build and deployment":
    - Source: Select **GitHub Actions**
@@ -74,7 +64,6 @@ The GitHub Actions workflow:
 
 **Issue: Workflow fails to build**
 - Check the Actions tab for error logs
-- Verify `GEMINI_API_KEY` secret is set (if needed)
 - Ensure package.json has all required dependencies
 
 **Issue: Site shows 404 errors**

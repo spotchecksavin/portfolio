@@ -21,6 +21,10 @@ export const EXPERIENCES: Experience[] = [
     points: [
       "Architected production-grade healthcare AI platform processing 100,000+ daily transactions with 80% latency reduction using FastAPI microservices, Playwright-based RPA, and intelligent workflow orchestration",
       "Engineered end-to-end Document Intelligence pipeline combining OCR (Docling, PaddleOCR) with LLM-based extraction, achieving 70% reduction in manual data entry and 95% accuracy for medical document processing",
+      "Built multi-agent AI orchestration systems using LangGraph, AutoGen, and CrewAI — designing agentic workflows with tool use, memory, and reflection loops for automated healthcare decision pipelines",
+      "Developed RAG architectures for medical records intelligence — implemented hybrid search (dense + sparse retrieval) with Pinecone, ChromaDB, and custom retrieval chains for sub-5-second latency",
+      "Fine-tuned LLMs (Llama 3.1 8B, Mistral 7B) using LoRA/QLoRA with Hugging Face PEFT and TRL on 50K+ medical datasets — achieving 3x faster training and 40% memory reduction on consumer-grade GPUs",
+      "Engineered prompt engineering frameworks using few-shot, Chain-of-Thought, and ReAct patterns — improving generation quality metrics (ROUGE, BLEU) across medical entity extraction and report generation tasks",
       "Optimized distributed billing workflow system handling 100K+ records, improving throughput by 90% (6-7 hours to 30-40 minutes) through async processing, database query optimization, and parallel execution strategies",
       "Developed RESTful APIs and async task pipelines for real-time healthcare data transformation, integrating MySQL and MongoDB with advanced caching and connection pooling for high-concurrency scenarios",
       "Implemented production monitoring, logging, and error handling systems ensuring 99.9% uptime for mission-critical healthcare automation workflows"
@@ -102,36 +106,3 @@ export const SKILLS: SkillCategory[] = [
   { category: "DevOps & Cloud", items: ["AWS", "Docker", "GitHub Actions", "CI/CD", "Linux"] }
 ];
 
-export const FULL_RESUME_TEXT = `
-SAVINKUMAR N
-AI Developer at SpotCheck
-Email: savinkumarnsk10@gmail.com | Mobile: +91 9597934436
-
-PROFESSIONAL SUMMARY
-AI/ML Engineer with 1+ year of production experience building LLM-powered automation systems and healthcare AI platforms. Specialized in GenAI applications, RAG architectures, LLM fine-tuning, and MLOps.
-
-EXPERIENCE
-Spotcheck Global - AI Developer (Aug 2025 - Present)
-- Architected production-grade healthcare AI platform processing 100,000+ daily transactions with 80% latency reduction
-- Engineered end-to-end Document Intelligence pipeline combining OCR with LLM-based extraction (95% accuracy)
-- Optimized distributed billing workflow system improving throughput by 90%
-- Developed RESTful APIs and async task pipelines for real-time healthcare data transformation
-
-Spotcheck Global - Database Engineer Intern (Apr 2025 - Aug 2025)
-- Optimized complex database schemas and queries reducing query execution time by 60%
-- Built robust data validation and ETL pipelines processing healthcare records with 99.5% accuracy
-- Promoted to Backend Engineer after 4 months based on exceptional performance
-
-PROJECTS
-- Production LLM Fine-Tuning & Medical NLP System: Fine-tuned Llama 3.1 8B and Mistral 7B models on 50K+ custom medical datasets
-- Intelligent Healthcare RPA & Insurance Verification Platform: Engineered production-scale RPA system automating insurance eligibility verification
-- RAG-Based Medical Records Intelligence Agent: Architected RAG system converting complex HTML medical records to structured JSON
-- Advanced OCR & Document Intelligence Pipeline: Built multi-stage OCR pipeline processing 10K+ medical documents daily
-- Healthcare Data Normalization & ETL Engine: Engineered rule-based transformation engine normalizing CPT/ICD medical coding data
-
-SKILLS
-AI/ML & GenAI, Deep Learning & CV, Python Backend, FastAPI, Flask, Playwright, RPA, SQL, Vector DBs, MySQL, MongoDB, Docker
-
-EDUCATION
-B.Tech in Artificial Intelligence & Data Science, Hindusthan Institute of Technology (2021-2025), CGPA: 8.61/10
-`;
