@@ -43,37 +43,10 @@
       "label": "App()",
       "file_type": "code",
       "source_file": "App.tsx",
-      "source_location": "L23",
+      "source_location": "L22",
       "id": "app_app",
       "community": 3,
       "norm_label": "app()"
-    },
-    {
-      "label": "AIChat.tsx",
-      "file_type": "code",
-      "source_file": "components/AIChat.tsx",
-      "source_location": "L1",
-      "id": "components_aichat",
-      "community": 5,
-      "norm_label": "aichat.tsx"
-    },
-    {
-      "label": "SUGGESTIONS",
-      "file_type": "code",
-      "source_file": "components/AIChat.tsx",
-      "source_location": "L7",
-      "id": "components_aichat_suggestions",
-      "community": 5,
-      "norm_label": "suggestions"
-    },
-    {
-      "label": "AIChat()",
-      "file_type": "code",
-      "source_file": "components/AIChat.tsx",
-      "source_location": "L14",
-      "id": "components_aichat_aichat",
-      "community": 5,
-      "norm_label": "aichat()"
     },
     {
       "label": "Section.tsx",
@@ -81,7 +54,7 @@
       "source_file": "components/Section.tsx",
       "source_location": "L1",
       "id": "components_section",
-      "community": 3,
+      "community": 9,
       "norm_label": "section.tsx"
     },
     {
@@ -90,7 +63,7 @@
       "source_file": "components/Section.tsx",
       "source_location": "L5",
       "id": "components_section_sectionprops",
-      "community": 3,
+      "community": 9,
       "norm_label": "sectionprops"
     },
     {
@@ -99,7 +72,7 @@
       "source_file": "components/Section.tsx",
       "source_location": "L13",
       "id": "components_section_section",
-      "community": 3,
+      "community": 9,
       "norm_label": "section()"
     },
     {
@@ -153,7 +126,7 @@
       "source_file": "index.tsx",
       "source_location": "L1",
       "id": "index",
-      "community": 9,
+      "community": 3,
       "norm_label": "index.tsx"
     },
     {
@@ -162,7 +135,7 @@
       "source_file": "index.tsx",
       "source_location": "L6",
       "id": "index_rootelement",
-      "community": 9,
+      "community": 3,
       "norm_label": "rootelement"
     },
     {
@@ -171,7 +144,7 @@
       "source_file": "index.tsx",
       "source_location": "L11",
       "id": "index_root",
-      "community": 9,
+      "community": 3,
       "norm_label": "root"
     },
     {
@@ -297,7 +270,7 @@
       "source_file": "package.json",
       "source_location": "L7",
       "id": "package_scripts",
-      "community": 8,
+      "community": 2,
       "norm_label": "scripts"
     },
     {
@@ -306,7 +279,7 @@
       "source_file": "package.json",
       "source_location": "L8",
       "id": "package_scripts_dev",
-      "community": 8,
+      "community": 2,
       "norm_label": "dev"
     },
     {
@@ -315,7 +288,7 @@
       "source_file": "package.json",
       "source_location": "L9",
       "id": "package_scripts_build",
-      "community": 8,
+      "community": 2,
       "norm_label": "build"
     },
     {
@@ -324,7 +297,7 @@
       "source_file": "package.json",
       "source_location": "L10",
       "id": "package_scripts_preview",
-      "community": 8,
+      "community": 2,
       "norm_label": "preview"
     },
     {
@@ -333,7 +306,7 @@
       "source_file": "package.json",
       "source_location": "L11",
       "id": "package_scripts_lint",
-      "community": 8,
+      "community": 2,
       "norm_label": "lint"
     },
     {
@@ -342,7 +315,7 @@
       "source_file": "package.json",
       "source_location": "L12",
       "id": "package_scripts_deploy",
-      "community": 8,
+      "community": 2,
       "norm_label": "deploy"
     },
     {
@@ -355,19 +328,10 @@
       "norm_label": "dependencies"
     },
     {
-      "label": "@google/genai",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L15",
-      "id": "package_dependencies_google_genai",
-      "community": 4,
-      "norm_label": "@google/genai"
-    },
-    {
       "label": "@tailwindcss/vite",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L16",
+      "source_location": "L15",
       "id": "package_dependencies_tailwindcss_vite",
       "community": 4,
       "norm_label": "@tailwindcss/vite"
@@ -376,7 +340,7 @@
       "label": "framer-motion",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L16",
       "id": "package_dependencies_framer_motion",
       "community": 4,
       "norm_label": "framer-motion"
@@ -385,7 +349,7 @@
       "label": "lucide-react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L17",
       "id": "package_dependencies_lucide_react",
       "community": 4,
       "norm_label": "lucide-react"
@@ -394,7 +358,7 @@
       "label": "react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L18",
       "id": "package_dependencies_react",
       "community": 4,
       "norm_label": "react"
@@ -403,7 +367,7 @@
       "label": "react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L19",
       "id": "package_dependencies_react_dom",
       "community": 4,
       "norm_label": "react-dom"
@@ -412,7 +376,7 @@
       "label": "tailwindcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L20",
       "id": "package_dependencies_tailwindcss",
       "community": 4,
       "norm_label": "tailwindcss"
@@ -421,82 +385,55 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L22",
       "id": "package_devdependencies",
-      "community": 2,
+      "community": 8,
       "norm_label": "devdependencies"
     },
     {
       "label": "@types/node",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L23",
       "id": "package_devdependencies_types_node",
-      "community": 2,
+      "community": 8,
       "norm_label": "@types/node"
     },
     {
       "label": "@vitejs/plugin-react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L24",
       "id": "package_devdependencies_vitejs_plugin_react",
-      "community": 2,
+      "community": 8,
       "norm_label": "@vitejs/plugin-react"
     },
     {
       "label": "gh-pages",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L25",
       "id": "package_devdependencies_gh_pages",
-      "community": 2,
+      "community": 8,
       "norm_label": "gh-pages"
     },
     {
       "label": "typescript",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L26",
       "id": "package_devdependencies_typescript",
-      "community": 2,
+      "community": 8,
       "norm_label": "typescript"
     },
     {
       "label": "vite",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L27",
       "id": "package_devdependencies_vite",
-      "community": 2,
+      "community": 8,
       "norm_label": "vite"
-    },
-    {
-      "label": "geminiService.ts",
-      "file_type": "code",
-      "source_file": "services/geminiService.ts",
-      "source_location": "L1",
-      "id": "services_geminiservice",
-      "community": 5,
-      "norm_label": "geminiservice.ts"
-    },
-    {
-      "label": "apiKey",
-      "file_type": "code",
-      "source_file": "services/geminiService.ts",
-      "source_location": "L5",
-      "id": "services_geminiservice_apikey",
-      "community": 5,
-      "norm_label": "apikey"
-    },
-    {
-      "label": "askAiAboutSavin()",
-      "file_type": "code",
-      "source_file": "services/geminiService.ts",
-      "source_location": "L8",
-      "id": "services_geminiservice_askaiaboutsavin",
-      "community": 5,
-      "norm_label": "askaiaboutsavin()"
     },
     {
       "label": "tailwind.config.ts",
@@ -819,59 +756,50 @@
       "source_file": "GITHUB_PAGES_SETUP.md",
       "source_location": "L5",
       "id": "github_pages_setup_setup_instructions",
-      "community": 1,
+      "community": 5,
       "norm_label": "\ud83d\udccb setup instructions"
     },
     {
-      "label": "Step 1: Add GitHub Secrets (If Using API Keys)",
+      "label": "Step 1: Enable GitHub Pages",
       "file_type": "document",
       "source_file": "GITHUB_PAGES_SETUP.md",
       "source_location": "L7",
-      "id": "github_pages_setup_step_1_add_github_secrets_if_using_api_keys",
-      "community": 1,
-      "norm_label": "step 1: add github secrets (if using api keys)"
-    },
-    {
-      "label": "Step 2: Enable GitHub Pages",
-      "file_type": "document",
-      "source_file": "GITHUB_PAGES_SETUP.md",
-      "source_location": "L17",
-      "id": "github_pages_setup_step_2_enable_github_pages",
-      "community": 1,
-      "norm_label": "step 2: enable github pages"
+      "id": "github_pages_setup_step_1_enable_github_pages",
+      "community": 5,
+      "norm_label": "step 1: enable github pages"
     },
     {
       "label": "Step 3: Deploy",
       "file_type": "document",
       "source_file": "GITHUB_PAGES_SETUP.md",
-      "source_location": "L23",
+      "source_location": "L13",
       "id": "github_pages_setup_step_3_deploy",
-      "community": 1,
+      "community": 5,
       "norm_label": "step 3: deploy"
     },
     {
       "label": "**Option A: Automatic Deployment (Recommended)**",
       "file_type": "document",
       "source_file": "GITHUB_PAGES_SETUP.md",
-      "source_location": "L26",
+      "source_location": "L16",
       "id": "github_pages_setup_option_a_automatic_deployment_recommended",
-      "community": 1,
+      "community": 5,
       "norm_label": "**option a: automatic deployment (recommended)**"
     },
     {
       "label": "**Option B: Manual Deployment",
       "file_type": "document",
       "source_file": "GITHUB_PAGES_SETUP.md",
-      "source_location": "L37",
+      "source_location": "L27",
       "id": "github_pages_setup_option_b_manual_deployment",
-      "community": 1,
+      "community": 5,
       "norm_label": "**option b: manual deployment"
     },
     {
       "label": "\ud83c\udf10 Access Your Site",
       "file_type": "document",
       "source_file": "GITHUB_PAGES_SETUP.md",
-      "source_location": "L44",
+      "source_location": "L34",
       "id": "github_pages_setup_access_your_site",
       "community": 1,
       "norm_label": "\ud83c\udf10 access your site"
@@ -880,7 +808,7 @@
       "label": "\ud83d\udcdd What Was Configured",
       "file_type": "document",
       "source_file": "GITHUB_PAGES_SETUP.md",
-      "source_location": "L50",
+      "source_location": "L40",
       "id": "github_pages_setup_what_was_configured",
       "community": 1,
       "norm_label": "\ud83d\udcdd what was configured"
@@ -889,7 +817,7 @@
       "label": "\ud83d\udd04 Workflow Details",
       "file_type": "document",
       "source_file": "GITHUB_PAGES_SETUP.md",
-      "source_location": "L57",
+      "source_location": "L47",
       "id": "github_pages_setup_workflow_details",
       "community": 1,
       "norm_label": "\ud83d\udd04 workflow details"
@@ -898,7 +826,7 @@
       "label": "\ud83d\udcca Monitor Deployment",
       "file_type": "document",
       "source_file": "GITHUB_PAGES_SETUP.md",
-      "source_location": "L66",
+      "source_location": "L56",
       "id": "github_pages_setup_monitor_deployment",
       "community": 1,
       "norm_label": "\ud83d\udcca monitor deployment"
@@ -907,7 +835,7 @@
       "label": "\u2699\ufe0f Troubleshooting",
       "file_type": "document",
       "source_file": "GITHUB_PAGES_SETUP.md",
-      "source_location": "L73",
+      "source_location": "L63",
       "id": "github_pages_setup_troubleshooting",
       "community": 1,
       "norm_label": "\u2699\ufe0f troubleshooting"
@@ -916,7 +844,7 @@
       "label": "\ud83d\ude80 Next Steps",
       "file_type": "document",
       "source_file": "GITHUB_PAGES_SETUP.md",
-      "source_location": "L90",
+      "source_location": "L79",
       "id": "github_pages_setup_next_steps",
       "community": 1,
       "norm_label": "\ud83d\ude80 next steps"
@@ -949,6 +877,33 @@
       "norm_label": "run locally"
     },
     {
+      "label": "@google/genai",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "community": 4,
+      "norm_label": "@google/genai",
+      "id": "package_dependencies_google_genai"
+    },
+    {
+      "label": "Step 1: Add GitHub Secrets (If Using API Keys)",
+      "file_type": "document",
+      "source_file": "GITHUB_PAGES_SETUP.md",
+      "source_location": "L7",
+      "community": 5,
+      "norm_label": "step 1: add github secrets (if using api keys)",
+      "id": "github_pages_setup_step_1_add_github_secrets_if_using_api_keys"
+    },
+    {
+      "label": "Step 2: Enable GitHub Pages",
+      "file_type": "document",
+      "source_file": "GITHUB_PAGES_SETUP.md",
+      "source_location": "L17",
+      "community": 5,
+      "norm_label": "step 2: enable github pages",
+      "id": "github_pages_setup_step_2_enable_github_pages"
+    },
+    {
       "label": "VantaInstance",
       "file_type": "code",
       "source_file": "App.tsx",
@@ -956,15 +911,6 @@
       "community": 3,
       "norm_label": "vantainstance",
       "id": "app_vantainstance"
-    },
-    {
-      "label": "ai",
-      "file_type": "code",
-      "source_file": "services/geminiService.ts",
-      "source_location": "L5",
-      "community": 5,
-      "norm_label": "ai",
-      "id": "services_geminiservice_ai"
     }
   ],
   "links": [
@@ -1007,17 +953,6 @@
       "confidence_score": 1.0,
       "source": "app",
       "target": "app_vantainstance"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "App.tsx",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "app",
-      "target": "components_aichat"
     },
     {
       "relation": "imports_from",
@@ -1095,48 +1030,6 @@
       "confidence_score": 1.0,
       "source": "index",
       "target": "app"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "components/AIChat.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "components_aichat",
-      "target": "components_aichat_aichat"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "components/AIChat.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "components_aichat",
-      "target": "components_aichat_suggestions"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "components/AIChat.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "components_aichat",
-      "target": "services_geminiservice"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "components/AIChat.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "components_aichat",
-      "target": "services_geminiservice_askaiaboutsavin"
     },
     {
       "relation": "contains",
@@ -1243,17 +1136,6 @@
       "target": "types_skillcategory"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "services/geminiService.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_geminiservice",
-      "target": "constants"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "index.tsx",
@@ -1309,9 +1191,9 @@
       "source_file": "opencode.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "opencode",
-      "target": "opencode_lsp",
-      "confidence_score": 1.0
+      "target": "opencode_lsp"
     },
     {
       "relation": "contains",
@@ -1319,9 +1201,9 @@
       "source_file": "opencode.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "opencode",
-      "target": "opencode_schema",
-      "confidence_score": 1.0
+      "target": "opencode_schema"
     },
     {
       "relation": "contains",
@@ -1572,36 +1454,6 @@
       "confidence_score": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_vitejs_plugin_react"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "services/geminiService.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_geminiservice",
-      "target": "services_geminiservice_ai"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "services/geminiService.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_geminiservice",
-      "target": "services_geminiservice_apikey"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "services/geminiService.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "services_geminiservice",
-      "target": "services_geminiservice_askaiaboutsavin"
     },
     {
       "relation": "contains",
@@ -1967,6 +1819,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "GITHUB_PAGES_SETUP.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "github_pages_setup_setup_instructions",
+      "target": "github_pages_setup_step_1_enable_github_pages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GITHUB_PAGES_SETUP.md",
       "source_location": "L17",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2025,5 +1887,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e9d1b6f6bc13df1620ba18c5bf03f8515874d57d"
+  "built_at_commit": "625a879f1dbbdf2d97efb77f0a6030fe0cada03e"
 }

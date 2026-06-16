@@ -14,10 +14,8 @@ import {
   Sun,
   Moon,
   Cloud,
-  MessageCircle,
 } from 'lucide-react';
 import Section from './components/Section';
-import AIChat from './components/AIChat';
 import { PERSONAL_INFO, SKILLS, EXPERIENCES, PROJECTS } from './constants';
 
 const App: React.FC = () => {
@@ -445,7 +443,6 @@ const App: React.FC = () => {
                 { icon: <Mail />, label: PERSONAL_INFO.email, href: `mailto:${PERSONAL_INFO.email}`, color: 'bg-blue-600' },
                 { icon: <Linkedin />, label: 'linkedin/savinkumarn', href: `https://linkedin.com/in/${PERSONAL_INFO.linkedin}`, color: 'bg-indigo-600' },
                 { icon: <Github />, label: 'github/savinkumarnsk', href: 'https://github.com/savinkumarnsk', color: 'bg-slate-600 dark:bg-slate-800' },
-                { icon: <MessageCircle />, label: 'whatsapp/connect', href: `https://wa.me/${PERSONAL_INFO.phone.replace(/[^0-9]/g, '')}`, color: 'bg-emerald-500' },
               ].map((link, i) => (
                 <motion.a
                   key={i}
@@ -482,7 +479,6 @@ const App: React.FC = () => {
 
       </footer>
 
-      <AIChat />
       </div>
     </>
   );

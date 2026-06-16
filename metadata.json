@@ -1,6 +1,6 @@
 {
   "name": "Savinkumar N Portfolio",
-  "description": "A high-performance personal portfolio for an AI & Automation Engineer, featuring a resume-grounded AI assistant.",
+  "description": "A high-performance personal portfolio for an AI & Automation Engineer, featuring projects and professional experience.",
   "requestFramePermissions": [
     "microphone"
   ]
